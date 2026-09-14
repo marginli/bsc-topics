@@ -1,0 +1,115 @@
+/* BSC 專題課程總覽頁的樣式。
+   從 VFB/assets/vfb.css 裁出來的骨架——兩個專題站用的是同一組設計變數，
+   所以總覽頁沿用同一套，不要另外發明一套顏色與字級。
+   裁掉的是專題頁才用得到的東西（圖、表、各種說明框、流程圖、程式碼）。
+   **改視覺的時候三個檔案要一起改**：這個檔、VFB/assets/vfb.css、LPU/assets/lpu.css。 */
+:root{
+  --ink:#1b2733; --soft:#5a6b7b; --faint:#8b98a5;
+  --bg:#ffffff; --panel:#f7f8fa; --border:#e4e8ee;
+  --accent:#2563eb; --accent-soft:#eff4ff;
+  --maxw:920px; --radius:12px;
+  --green:#16a34a; --blue:#2563eb; --purple:#9333ea; --amber:#d97706; --red:#dc2626;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:-apple-system,"Segoe UI","Noto Sans TC","Microsoft JhengHei","PingFang TC",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.85; font-size:16.5px; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px 110px}
+header.hero{max-width:var(--maxw); margin:0 auto; padding:54px 22px 22px}
+.eyebrow{color:var(--accent); font-weight:700; font-size:13px; letter-spacing:.08em; text-transform:uppercase; margin:0 0 10px}
+h1{font-size:33px; line-height:1.3; margin:0 0 12px; letter-spacing:-.01em; text-wrap:balance}
+.subtitle{font-size:18px; color:var(--soft); margin:0 0 8px}
+h2{font-size:25px; margin:60px 0 8px; padding-top:16px; border-top:2px solid var(--border); line-height:1.35; text-wrap:balance}
+h2 .pt{color:var(--accent); font-size:15px; display:block; font-weight:700; letter-spacing:.05em; margin-bottom:2px}
+h3{font-size:19px; margin:36px 0 10px; text-wrap:balance}
+h4{font-size:16px; margin:22px 0 6px}
+p{margin:12px 0}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:4px}
+ul,ol{padding-left:22px}
+li{margin:7px 0}
+blockquote{margin:16px 0; padding:10px 18px; border-left:4px solid var(--accent); background:var(--accent-soft); border-radius:0 8px 8px 0}
+
+/* ── 首頁：三個按鈕 ── */
+.btns{display:grid; gap:16px; margin:34px 0 10px}
+@media(min-width:640px){.btns{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:940px){.btns{grid-template-columns:repeat(3,1fr)}}
+a.btn{
+  display:flex; flex-direction:column; gap:8px;
+  border:1px solid var(--border); border-left:5px solid var(--accent);
+  border-radius:var(--radius); background:var(--panel);
+  padding:22px 22px 24px; color:var(--ink); text-decoration:none;
+  transition:box-shadow .15s ease, transform .15s ease, background .15s ease;
+}
+a.btn:hover{background:#fff; box-shadow:0 10px 28px rgba(16,24,40,.10); transform:translateY(-2px); text-decoration:none}
+a.btn .no{font-size:12px; font-weight:700; letter-spacing:.08em; color:var(--accent)}
+a.btn .t{font-size:20px; font-weight:700; line-height:1.4}
+a.btn .s{font-size:14.5px; color:var(--soft); line-height:1.7; margin:0}
+a.btn .m{font-size:13px; color:var(--faint); margin:6px 0 0}
+a.btn.c2{border-left-color:var(--purple)}
+a.btn.c2 .no{color:var(--purple)}
+a.btn.c3{border-left-color:var(--green)}
+a.btn.c3 .no{color:var(--green)}
+a.btn.c4{border-left-color:var(--amber)}
+a.btn.c4 .no{color:var(--amber)}
+a.btn.c5{border-left-color:var(--red)}
+a.btn.c5 .no{color:var(--red)}
+a.btn.soon{background:#fbfbfc; border-style:dashed}
+a.btn.soon .t{color:var(--soft)}
+
+
+
+
+.foot{max-width:var(--maxw); margin:0 auto; padding:28px 22px; color:var(--faint); font-size:13px; border-top:1px solid var(--border)}
+
+/* 待填內容的佔位段落 */
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto} a.btn:hover{transform:none}}
+
+/* ── 圖 ── */
+/* 並排的兩張圖：各自帶說明，窄螢幕自動上下堆疊 */
+/* 色塊圖例 */
+/* 定義卡 */
+/* 名詞卡 */
+/* 案例列 */
+
+/* ── PART 2：流程圖、公式、步驟 ── */
+svg text{font-family:-apple-system,"Segoe UI","Noto Sans TC","Microsoft JhengHei",
+  "PingFang TC",Roboto,Helvetica,Arial,sans-serif}
+
+/* PART 3：可直接複製的指令框 */
+
+/* ── PART 5：讀程式 ── */
+                                    /* 註解 */
+
+/* 頁首的前後連結：跟頁尾同一組，只是線畫在下面 */
+
+/* ── VFB 專題新增 ── */
+/* 三張並排的視圖：窄螢幕一欄、中等兩欄、寬螢幕三欄 */
+/* 三張圖的長寬比差很多（正視圖扁、側視圖窄長、頂視圖很扁），
+   所以給每張一個等高的框、圖在框裡置中——這樣三段圖說會從同一條線開始，
+   讀者才不會以為某一張「比較重要」或漏看某一段。 */
+/* 英文引文：跟中文段落拉開，讓讀者一眼認出這是原文 */
+blockquote p[lang="en"]{font-size:15px; line-height:1.75; margin:4px 0}
+blockquote .figsrc{margin-top:8px}
+
+/* .figpair 的圖說：只有開頭那個 <b> 當標題獨佔一行。
+   原本的規則對所有 <b> 生效，句子中間一加粗體就會被硬斷行。 */
+
+
+/* ── 總覽頁專用 ───────────────────────────────────────── */
+.meta{display:flex; flex-wrap:wrap; gap:6px 14px; margin:12px 0 0; padding:0; list-style:none;
+  font-size:13.5px; color:var(--soft)}
+.meta li{margin:0; display:flex; align-items:center; gap:6px}
+.meta .dot{width:7px; height:7px; border-radius:50%; background:var(--accent); flex:none}
+.lede{font-size:17.5px; margin:20px 0 4px}
+.what{background:var(--panel); border:1px solid var(--border); border-radius:var(--radius);
+  padding:16px 20px; margin:26px 0}
+.what h3{margin:0 0 6px; font-size:17px}
+.what p{margin:6px 0}
+.next{border:1px dashed var(--border); border-radius:var(--radius); padding:18px 20px;
+  margin:20px 0 0; color:var(--soft); font-size:15px; background:transparent}
+.next b{color:var(--ink)}
