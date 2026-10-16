@@ -20,14 +20,14 @@
 **不要在這裡重寫專題的介紹**——卡片上那段話要跟該專題自己首頁的講法一致，
 改了那邊就要回來改這邊（核心規範第 12 節〈跨頁一致性〉）。
 
-## 視覺改動要三個檔案一起改
+## 視覺改動要四個檔案一起改
 
-`assets/bsc.css`、`VFB/assets/vfb.css`、`LPU/assets/lpu.css` 用的是同一組設計變數
-（`--ink`／`--accent`／`--maxw` 那一組）。三個站看起來是一套，是因為變數一樣；
-只改其中一個，三個站就會開始長得不一樣。
+`assets/bsc.css`、`VFB/assets/vfb.css`、`LPU/assets/lpu.css`、`fly_simu/assets/flysimu.css` 用的是同一組設計變數
+（`--ink`／`--accent`／`--maxw` 那一組）。四個站看起來是一套，是因為變數一樣；
+只改其中一個，四個站就會開始長得不一樣。
 
 ## 本機原始碼
 
-`BSC_plan/specific_topics/hub/`。各專題的原始碼在它旁邊的 `LPU/`、`VFB/`。
+`BSC_plan/specific_topics/hub/`。各專題的原始碼在它旁邊的 `LPU/`、`VFB/`、`fly_simu/`。
 
 教學用途，非營利。
